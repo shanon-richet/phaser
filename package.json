@@ -1,0 +1,28 @@
+{
+  "name": "caramel",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.mjs",
+    "start": "nodemon server.mjs",
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+  },
+  "keywords": [],
+  "author": "Shanon Richet",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "parcel": "latest",
+    "phaser": "^3.55.2",
+    "phaser-ce": "^2.8.2"
+  },
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.4.0"
+  },
+  "engines": {
+    "node": "16.X"
+  }
+}
