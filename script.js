@@ -1,4 +1,3 @@
-
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 
     null, {
         create: create, 
@@ -6,7 +5,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO,
         update: update
     })
     
-    var background;
+    var background
     
     function preload() {
     game.load.image('forme1', 'assets/forme1.png')
