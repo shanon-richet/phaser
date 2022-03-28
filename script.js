@@ -2,7 +2,7 @@ const main = document.querySelector('main')
 const grid = document.querySelector('.grid')
 const sequence = document.querySelector('.sequence')
 
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 
+var game = new Phaser.Game(1000, 600, Phaser.CANVAS, 
     'phaser', {
         create: create, 
         preload: preload,
@@ -22,11 +22,18 @@ function preload() {
 }
 function create() {
         var form_grid = game.add.group();
-        form_grid.createMultiple(2.5, ['forme1', 'forme2', 'forme3', 'forme4', 'forme5', 'forme6'], [0, 2], true);
-        form_grid.align(10, 10, 100, 100)
+        form_grid.createMultiple(2, 
+            [`forme${[Math.floor(Math.random() * 6)]}`, 
+            `forme${[Math.floor(Math.random() * 6)]}`, 
+            `forme${[Math.floor(Math.random() * 6)]}`, 
+            `forme${[Math.floor(Math.random() * 6)]}`, 
+            `forme${[Math.floor(Math.random() * 6)]}`, 
+            `forme${[Math.floor(Math.random() * 6)]}`], [0, 1], true);
+        form_grid.align(5, 5, 100, 100)
 
-        form_grid.x = 100;
+        form_grid.x = 200;
         form_grid.y = 200;
+
         cases_1 = new Phaser.Rectangle(20, 50, 100, 100)
         cases_2 = new Phaser.Rectangle(150, 50, 100, 100)
         cases_3 = new Phaser.Rectangle(280, 50, 100, 100)
