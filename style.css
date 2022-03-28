@@ -1,3 +1,30 @@
 body { 
-    background-color: aqua;
+    background-color: black;
+}
+.sequence {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    margin-left: 50px;
+}
+.background_sequence { 
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+.grid {
+    margin-top: 200px;
+    margin-left: 50px;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+.background_grid {
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    background-color: #427aa1;
 }
