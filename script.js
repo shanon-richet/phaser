@@ -11,22 +11,22 @@ var game = new Phaser.Game(800, 600, Phaser.CANVAS,
     })
 
 var background
-
+const form_list = []
 function preload() {
     game.stage.backgroundColor = "#fcba03"
     for (var i = 0; i < 7; i++) {
         game.load.image(`forme${i}`, `assets/forme${i}.png`)  
-        game.load.spritesheet('formes', `assets/forme${i}.png`, 32, 32)
+        const list = game.load.spritesheet('formes', `assets/forme${i}.png`, 32, 32)
+        form_list.push(list)
     }  
 }
+function create() {
+        var form_grid = game.add.group();
+        form_grid.createMultiple(2.5, ['forme1', 'forme2', 'forme3', 'forme4', 'forme5', 'forme6'], [0, 2], true);
+        form_grid.align(10, 10, 100, 100)
 
-    function create() {
-        var group = game.add.group();
-        group.createMultiple(4, ['forme1', 'forme2', 'forme3', 'forme4', 'forme5', 'forme6'], [0, 2], true);
-        group.align(10, 10, 100, 100)
-
-        group.x = 100;
-        group.y = 200;
+        form_grid.x = 100;
+        form_grid.y = 200;
         cases_1 = new Phaser.Rectangle(20, 50, 100, 100)
         cases_2 = new Phaser.Rectangle(150, 50, 100, 100)
         cases_3 = new Phaser.Rectangle(280, 50, 100, 100)
@@ -41,14 +41,12 @@ function preload() {
 
         for (var i = 0; i < 6; i++) {
             formes.push(`forme${i}`)
-        }   
-        
+        }     
     }
     function render() {
         game.debug.geom(cases_1, '#03f8fc')
         game.debug.geom(cases_2, '#03f8fc')
         game.debug.geom(cases_3, '#03f8fc')
-
     }    
 
     function update() {
