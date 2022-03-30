@@ -1,16 +1,4 @@
 body { 
-    background-color: black;
 }
-.sequence {
-    width: 300px;
-    height: 100px;
-    position: absolute;
-    display: flex;
-    margin-left: 50px;
-}
-.background_sequence { 
-    background-color: white;
-    width: 50px;
-    height: 50px;
-}
+
 
